@@ -36,3 +36,21 @@ Author Information
 ------------------
 
 An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+
+
+GitHub not authenticating with Ansible-Master with username and password, follow these steps:
+1.ssh-keygen -t ed25519 -C "your_email@example.com"
+2.cat ~/.ssh/id_ed25519.pub
+🌐 3. Add your SSH key to GitHub:
+Go to: https://github.com/settings/keys
+
+Click New SSH Key
+
+Title: ansible-master (or anything meaningful)
+
+Paste your public key
+
+Click Add SSH key
+4.git remote set-url origin git@github.com:DeeptiSingh2409/ansible-role.git
+5.git push -u origin master
+
